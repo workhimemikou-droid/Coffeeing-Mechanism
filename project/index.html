@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffeeing Mechanism</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 50px;
+      border-bottom: 2px solid black;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 60px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: black;
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      background: url("background.png") no-repeat center; 
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      background-color: black;
+    }
+    .hero h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 20px;
+      margin: 10px 0 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+
+    /* MENU */
+    .menu {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .menu h2 {
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .menu-card {
+      border: 1px solid black;
+      padding: 20px;
+      text-align: left;
+      border-radius: 10px;
+    }
+
+    /* RESERVATION */
+    .reservation {
+      padding: 50px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+    .reservation h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .reservation form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: grid;
+      gap: 15px;
+      text-align: left;
+    }
+    .reservation label {
+      font-weight: bold;
+    }
+    .reservation input, .reservation select, .reservation button {
+      padding: 10px;
+      border: 1px solid black;
+      font-size: 16px;
+      width: 100%;
+    }
+    .reservation button {
+      background: black;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .reservation button:hover {
+      background: white;
+      color: black;
+    }
+
+    /* FEEDBACK */
+    .feedback {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .feedback-card {
+      border: 1px solid black;
+      padding: 20px;
+      border-radius: 10px;
+      font-style: italic;
+      background: #fdfdfd;
+    }
+
+    /* FOOTER */
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="logo2.jpg" alt="Coffeeing Mechanism Logo">
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#reservation">Reservation</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Coffeeing Mechanism</h1>
+    <p>Your Daily Dose of Sanity in a Cup</p>
+    <a href="#menu" class="btn">☕ Order Now</a>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>Espresso-Based Coffee</h3>
+        <p>Americano – ₱70 / ₱80</p>
+        <p>Spanish Latte – ₱85 / ₱95</p>
+        <p>Vanilla Latte – ₱85 / ₱95</p>
+        <p>Strawberry Espresso – ₱85 / ₱95</p>
+        <p>Iced Mocha Latte – ₱85 / ₱95</p>
+        <p>Caramel Macchiato – ₱85 / ₱95</p>
+        <p>Cacao Latte – ₱85 / ₱95</p>
+      </div>
+      <div class="menu-card">
+        <h3>Matcha Series</h3>
+        <p>Matcha Latte – ₱89 / ₱99</p>
+        <p>Oreo Matcha – ₱89 / ₱99</p>
+        <p>Caramel Matcha Latte – ₱89 / ₱99</p>
+        <p>Matcha Espresso – ₱89 / ₱99</p>
+        <p>Berry Matcha – ₱89 / ₱99</p>
+        <p>Choco Matcha – ₱89 / ₱99</p>
+      </div>
+      <div class="menu-card">
+        <h3>Fruity Cloud Series</h3>
+        <p>Lychee Cloud Cup – ₱75 / ₱85</p>
+        <p>Blueberry Cloud Cup – ₱75 / ₱85</p>
+        <p>Green Apple Cloud Cup – ₱75 / ₱85</p>
+        <p>Berry Cloud Cup – ₱75 / ₱85</p>
+      </div>
+      <div class="menu-card">
+        <h3>Milkhouse Series</h3>
+        <p>Milky Strawberry – ₱75 / ₱85</p>
+        <p>Milky Oreo – ₱75 / ₱85</p>
+        <p>Milky Caramel – ₱75 / ₱85</p>
+        <p>Milky Chocolate – ₱75 / ₱85</p>
+      </div>
+      <div class="menu-card">
+        <h3>Sparkle Series</h3>
+        <p>Lychee – ₱39 / ₱49</p>
+        <p>Berry – ₱39 / ₱49</p>
+        <p>Blueberry – ₱39 / ₱49</p>
+        <p>Green Apple – ₱39 / ₱49</p>
+      </div>
+      <div class="menu-card">
+        <h3>Add-ons</h3>
+        <p>Oreo crumbs – ₱10</p>
+        <p>Syrup drizzle – ₱5</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="menu" id="about">
+    <h2>About Us</h2>
+    <p>
+      Coffeeing Mechanism is more than just coffee – it’s a space where flavor meets comfort. 
+      We bring handcrafted espresso, refreshing fruity blends, and creamy milk drinks to Bacacay. 
+      Whether you’re on the go or staying for a chat, we’ve got your daily sanity in a cup.
+    </p>
+  </section>
+
+  <!-- RESERVATION -->
+  <section class="reservation" id="reservation">
+    <h2>Make a Reservation</h2>
+    <form>
+      <label for="date">Date</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Time</label>
+      <input type="time" id="time" required>
+
+      <label for="guests">Number of Guests</label>
+      <select id="guests" required>
+        <option value="">Select</option>
+        <option>1 Person</option>
+        <option>2 People</option>
+        <option>3 People</option>
+        <option>4 People</option>
+        <option>5+ People</option>
+      </select>
+
+      <button type="submit">Check Availability</button>
+    </form>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section class="feedback" id="feedback">
+    <h2>Customer Feedback</h2>
+    <div class="feedback-grid">
+      <div class="feedback-card">
+        <p>"The best Spanish Latte I’ve ever had! Super smooth and flavorful."</p>
+        <strong>- Ana M.</strong>
+      </div>
+      <div class="feedback-card">
+        <p>"Perfect study spot! The drinks are affordable and so aesthetic."</p>
+        <strong>- James L.</strong>
+      </div>
+      <div class="feedback-card">
+        <p>"I love the Fruity Cloud series, it’s refreshing and unique!"</p>
+        <strong>- Camille S.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    <p>📍 Brgy. 3 Blvd, Bacacay, Albay | 📞 0927-955-2074</p>
+    <p>📷 FB: Coffeeing Mechanism | IG: @coffeeingmechanizm</p>
+    <p>🕒 Open Daily: 8AM – 8PM</p>
+    <p>© 2025 Coffeeing Mechanism. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
